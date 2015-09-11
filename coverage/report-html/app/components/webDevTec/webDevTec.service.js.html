@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/components/webDevTec/webDevTec.service.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">app/components/webDevTec/webDevTec.service.js</span></h1>
+    <h2>
+        Statements: <span class="metric">100% <small>(7 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(3 / 3)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(7 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">app/components/webDevTec/</a> &#187; webDevTec.service.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function() {
+  angular.module("modeloFrontCoffee").service("webDevTec", function() {
+    var data, getTec;
+    data = [
+      {
+        'title': 'AngularJS',
+        'url': 'https://angularjs.org/',
+        'description': 'HTML enhanced for web apps!',
+        'logo': 'angular.png'
+      }, {
+        'title': 'BrowserSync',
+        'url': 'http://browsersync.io/',
+        'description': 'Time-saving synchronised browser testing.',
+        'logo': 'browsersync.png'
+      }, {
+        'title': 'GulpJS',
+        'url': 'http://gulpjs.com/',
+        'description': 'The streaming build system.',
+        'logo': 'gulp.png'
+      }, {
+        'title': 'Jasmine',
+        'url': 'http://jasmine.github.io/',
+        'description': 'Behavior-Driven JavaScript.',
+        'logo': 'jasmine.png'
+      }, {
+        'title': 'Karma',
+        'url': 'http://karma-runner.github.io/',
+        'description': 'Spectacular Test Runner for JavaScript.',
+        'logo': 'karma.png'
+      }, {
+        'title': 'Protractor',
+        'url': 'https://github.com/angular/protractor',
+        'description': 'End to end test framework for AngularJS applications built on top of WebDriverJS.',
+        'logo': 'protractor.png'
+      }, {
+        'title': 'Bootstrap',
+        'url': 'http://getbootstrap.com/',
+        'description': 'Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.',
+        'logo': 'bootstrap.png'
+      }, {
+        'title': 'Angular UI Bootstrap',
+        'url': 'http://angular-ui.github.io/bootstrap/',
+        'description': 'Bootstrap components written in pure AngularJS by the AngularUI Team.',
+        'logo': 'ui-bootstrap.png'
+      }, {
+        'title': 'Sass (Node)',
+        'url': 'https://github.com/sass/node-sass',
+        'description': 'Node.js binding to libsass, the C version of the popular stylesheet preprocessor, Sass.',
+        'logo': 'node-sass.png'
+      }, {
+        'title': 'CoffeeScript',
+        'url': 'http://coffeescript.org/',
+        'description': 'CoffeeScript, \'a little language that compiles into JavaScript\'.',
+        'logo': 'coffeescript.png'
+      }
+    ];
+    getTec = function() {
+      return data;
+    };
+    this.getTec = getTec;
+  });
+&nbsp;
+}).call(this);
+&nbsp;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvd2ViRGV2VGVjL3dlYkRldlRlYy5zZXJ2aWNlLmNvZmZlZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUFBLE9BQU8sQ0FBQyxNQUFSLENBQWUsbUJBQWYsQ0FDRSxDQUFDLE9BREgsQ0FDVyxXQURYLEVBQ3dCLFNBQUE7QUFDcEIsUUFBQTtJQUFBLElBQUEsR0FBTztNQUNMO1FBQ0UsT0FBQSxFQUFTLFdBRFg7UUFFRSxLQUFBLEVBQU8sd0JBRlQ7UUFHRSxhQUFBLEVBQWUsNkJBSGpCO1FBSUUsTUFBQSxFQUFRLGFBSlY7T0FESyxFQU9MO1FBQ0UsT0FBQSxFQUFTLGFBRFg7UUFFRSxLQUFBLEVBQU8sd0JBRlQ7UUFHRSxhQUFBLEVBQWUsMkNBSGpCO1FBSUUsTUFBQSxFQUFRLGlCQUpWO09BUEssRUFhTDtRQUNFLE9BQUEsRUFBUyxRQURYO1FBRUUsS0FBQSxFQUFPLG9CQUZUO1FBR0UsYUFBQSxFQUFlLDZCQUhqQjtRQUlFLE1BQUEsRUFBUSxVQUpWO09BYkssRUFtQkw7UUFDRSxPQUFBLEVBQVMsU0FEWDtRQUVFLEtBQUEsRUFBTywyQkFGVDtRQUdFLGFBQUEsRUFBZSw2QkFIakI7UUFJRSxNQUFBLEVBQVEsYUFKVjtPQW5CSyxFQXlCTDtRQUNFLE9BQUEsRUFBUyxPQURYO1FBRUUsS0FBQSxFQUFPLGdDQUZUO1FBR0UsYUFBQSxFQUFlLHlDQUhqQjtRQUlFLE1BQUEsRUFBUSxXQUpWO09BekJLLEVBK0JMO1FBQ0UsT0FBQSxFQUFTLFlBRFg7UUFFRSxLQUFBLEVBQU8sdUNBRlQ7UUFHRSxhQUFBLEVBQWUsbUZBSGpCO1FBSUUsTUFBQSxFQUFRLGdCQUpWO09BL0JLLEVBcUNMO1FBQ0UsT0FBQSxFQUFTLFdBRFg7UUFFRSxLQUFBLEVBQU8sMEJBRlQ7UUFHRSxhQUFBLEVBQWUsd0hBSGpCO1FBSUUsTUFBQSxFQUFRLGVBSlY7T0FyQ0ssRUEyQ0w7UUFDRSxPQUFBLEVBQVMsc0JBRFg7UUFFRSxLQUFBLEVBQU8sd0NBRlQ7UUFHRSxhQUFBLEVBQWUsdUVBSGpCO1FBSUUsTUFBQSxFQUFRLGtCQUpWO09BM0NLLEVBaURMO1FBQ0UsT0FBQSxFQUFTLGFBRFg7UUFFRSxLQUFBLEVBQU8sbUNBRlQ7UUFHRSxhQUFBLEVBQWUseUZBSGpCO1FBSUUsTUFBQSxFQUFRLGVBSlY7T0FqREssRUF1REw7UUFDRSxPQUFBLEVBQVMsY0FEWDtRQUVFLEtBQUEsRUFBTywwQkFGVDtRQUdFLGFBQUEsRUFBZSxvRUFIakI7UUFJRSxNQUFBLEVBQVEsa0JBSlY7T0F2REs7O0lBK0RQLE1BQUEsR0FBUyxTQUFBO2FBQ1A7SUFETztJQUdULElBQUMsQ0FBQSxNQUFELEdBQVU7RUFuRVUsQ0FEeEI7QUFBQSIsImZpbGUiOiJjb21wb25lbnRzL3dlYkRldlRlYy93ZWJEZXZUZWMuc2VydmljZS5qcyIsInNvdXJjZVJvb3QiOiIvc291cmNlLyIsInNvdXJjZXNDb250ZW50IjpbImFuZ3VsYXIubW9kdWxlIFwibW9kZWxvRnJvbnRDb2ZmZWVcIlxuICAuc2VydmljZSBcIndlYkRldlRlY1wiLCAoKSAtPlxuICAgIGRhdGEgPSBbXG4gICAgICB7XG4gICAgICAgICd0aXRsZSc6ICdBbmd1bGFySlMnLFxuICAgICAgICAndXJsJzogJ2h0dHBzOi8vYW5ndWxhcmpzLm9yZy8nLFxuICAgICAgICAnZGVzY3JpcHRpb24nOiAnSFRNTCBlbmhhbmNlZCBmb3Igd2ViIGFwcHMhJyxcbiAgICAgICAgJ2xvZ28nOiAnYW5ndWxhci5wbmcnXG4gICAgICB9LFxuICAgICAge1xuICAgICAgICAndGl0bGUnOiAnQnJvd3NlclN5bmMnLFxuICAgICAgICAndXJsJzogJ2h0dHA6Ly9icm93c2Vyc3luYy5pby8nLFxuICAgICAgICAnZGVzY3JpcHRpb24nOiAnVGltZS1zYXZpbmcgc3luY2hyb25pc2VkIGJyb3dzZXIgdGVzdGluZy4nLFxuICAgICAgICAnbG9nbyc6ICdicm93c2Vyc3luYy5wbmcnXG4gICAgICB9LFxuICAgICAge1xuICAgICAgICAndGl0bGUnOiAnR3VscEpTJyxcbiAgICAgICAgJ3VybCc6ICdodHRwOi8vZ3VscGpzLmNvbS8nLFxuICAgICAgICAnZGVzY3JpcHRpb24nOiAnVGhlIHN0cmVhbWluZyBidWlsZCBzeXN0ZW0uJyxcbiAgICAgICAgJ2xvZ28nOiAnZ3VscC5wbmcnXG4gICAgICB9LFxuICAgICAge1xuICAgICAgICAndGl0bGUnOiAnSmFzbWluZScsXG4gICAgICAgICd1cmwnOiAnaHR0cDovL2phc21pbmUuZ2l0aHViLmlvLycsXG4gICAgICAgICdkZXNjcmlwdGlvbic6ICdCZWhhdmlvci1Ecml2ZW4gSmF2YVNjcmlwdC4nLFxuICAgICAgICAnbG9nbyc6ICdqYXNtaW5lLnBuZydcbiAgICAgIH0sXG4gICAgICB7XG4gICAgICAgICd0aXRsZSc6ICdLYXJtYScsXG4gICAgICAgICd1cmwnOiAnaHR0cDovL2thcm1hLXJ1bm5lci5naXRodWIuaW8vJyxcbiAgICAgICAgJ2Rlc2NyaXB0aW9uJzogJ1NwZWN0YWN1bGFyIFRlc3QgUnVubmVyIGZvciBKYXZhU2NyaXB0LicsXG4gICAgICAgICdsb2dvJzogJ2thcm1hLnBuZydcbiAgICAgIH0sXG4gICAgICB7XG4gICAgICAgICd0aXRsZSc6ICdQcm90cmFjdG9yJyxcbiAgICAgICAgJ3VybCc6ICdodHRwczovL2dpdGh1Yi5jb20vYW5ndWxhci9wcm90cmFjdG9yJyxcbiAgICAgICAgJ2Rlc2NyaXB0aW9uJzogJ0VuZCB0byBlbmQgdGVzdCBmcmFtZXdvcmsgZm9yIEFuZ3VsYXJKUyBhcHBsaWNhdGlvbnMgYnVpbHQgb24gdG9wIG9mIFdlYkRyaXZlckpTLicsXG4gICAgICAgICdsb2dvJzogJ3Byb3RyYWN0b3IucG5nJ1xuICAgICAgfSxcbiAgICAgIHtcbiAgICAgICAgJ3RpdGxlJzogJ0Jvb3RzdHJhcCcsXG4gICAgICAgICd1cmwnOiAnaHR0cDovL2dldGJvb3RzdHJhcC5jb20vJyxcbiAgICAgICAgJ2Rlc2NyaXB0aW9uJzogJ0Jvb3RzdHJhcCBpcyB0aGUgbW9zdCBwb3B1bGFyIEhUTUwsIENTUywgYW5kIEpTIGZyYW1ld29yayBmb3IgZGV2ZWxvcGluZyByZXNwb25zaXZlLCBtb2JpbGUgZmlyc3QgcHJvamVjdHMgb24gdGhlIHdlYi4nLFxuICAgICAgICAnbG9nbyc6ICdib290c3RyYXAucG5nJ1xuICAgICAgfSxcbiAgICAgIHtcbiAgICAgICAgJ3RpdGxlJzogJ0FuZ3VsYXIgVUkgQm9vdHN0cmFwJyxcbiAgICAgICAgJ3VybCc6ICdodHRwOi8vYW5ndWxhci11aS5naXRodWIuaW8vYm9vdHN0cmFwLycsXG4gICAgICAgICdkZXNjcmlwdGlvbic6ICdCb290c3RyYXAgY29tcG9uZW50cyB3cml0dGVuIGluIHB1cmUgQW5ndWxhckpTIGJ5IHRoZSBBbmd1bGFyVUkgVGVhbS4nLFxuICAgICAgICAnbG9nbyc6ICd1aS1ib290c3RyYXAucG5nJ1xuICAgICAgfSxcbiAgICAgIHtcbiAgICAgICAgJ3RpdGxlJzogJ1Nhc3MgKE5vZGUpJyxcbiAgICAgICAgJ3VybCc6ICdodHRwczovL2dpdGh1Yi5jb20vc2Fzcy9ub2RlLXNhc3MnLFxuICAgICAgICAnZGVzY3JpcHRpb24nOiAnTm9kZS5qcyBiaW5kaW5nIHRvIGxpYnNhc3MsIHRoZSBDIHZlcnNpb24gb2YgdGhlIHBvcHVsYXIgc3R5bGVzaGVldCBwcmVwcm9jZXNzb3IsIFNhc3MuJyxcbiAgICAgICAgJ2xvZ28nOiAnbm9kZS1zYXNzLnBuZydcbiAgICAgIH0sXG4gICAgICB7XG4gICAgICAgICd0aXRsZSc6ICdDb2ZmZWVTY3JpcHQnLFxuICAgICAgICAndXJsJzogJ2h0dHA6Ly9jb2ZmZWVzY3JpcHQub3JnLycsXG4gICAgICAgICdkZXNjcmlwdGlvbic6ICdDb2ZmZWVTY3JpcHQsIFxcJ2EgbGl0dGxlIGxhbmd1YWdlIHRoYXQgY29tcGlsZXMgaW50byBKYXZhU2NyaXB0XFwnLicsXG4gICAgICAgICdsb2dvJzogJ2NvZmZlZXNjcmlwdC5wbmcnXG4gICAgICB9XG4gICAgXVxuXG4gICAgZ2V0VGVjID0gLT5cbiAgICAgIGRhdGFcblxuICAgIEBnZXRUZWMgPSBnZXRUZWNcbiAgICByZXR1cm5cbiJdfQ==</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Sep 10 2015 21:30:43 GMT-0300 (BRT)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

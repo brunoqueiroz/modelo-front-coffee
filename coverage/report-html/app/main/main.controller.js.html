@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/main/main.controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">app/main/main.controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">85% <small>(17 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">71.43% <small>(5 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">85% <small>(17 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">app/main/</a> &#187; main.controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function() {
+  angular.module("modeloFrontCoffee").controller("MainController", function($timeout, webDevTec, toastr) {
+    var activate, getWebDevTec, showToastr, vm;
+    vm = this;
+    activate = function() {
+      getWebDevTec();
+      $timeout((<span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >        vm.classAnimation = 'rubberBand';</span>
+      }), 4000);
+    };
+    showToastr = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      toastr.info('Fork &lt;a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"&gt;&lt;b&gt;generator-gulp-angular&lt;/b&gt;&lt;/a&gt;');</span>
+<span class="cstat-no" title="statement not covered" >      vm.classAnimation = '';</span>
+    };
+    getWebDevTec = function() {
+      vm.awesomeThings = webDevTec.getTec();
+      angular.forEach(vm.awesomeThings, function(awesomeThing) {
+        awesomeThing.rank = Math.random();
+      });
+    };
+    vm.awesomeThings = [];
+    vm.classAnimation = '';
+    vm.creationDate = 1441929294539;
+    vm.showToastr = showToastr;
+    activate();
+  });
+&nbsp;
+}).call(this);
+&nbsp;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4vbWFpbi5jb250cm9sbGVyLmNvZmZlZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUFBLE9BQU8sQ0FBQyxNQUFSLENBQWUsbUJBQWYsQ0FDRSxDQUFDLFVBREgsQ0FDYyxnQkFEZCxFQUNnQyxTQUFDLFFBQUQsRUFBVyxTQUFYLEVBQXNCLE1BQXRCO0FBQzVCLFFBQUE7SUFBQSxFQUFBLEdBQUs7SUFDTCxRQUFBLEdBQVcsU0FBQTtNQUNULFlBQUEsQ0FBQTtNQUNBLFFBQUEsQ0FBUyxDQUFDLFNBQUE7UUFDUixFQUFFLENBQUMsY0FBSCxHQUFvQjtNQURaLENBQUQsQ0FBVCxFQUdHLElBSEg7SUFGUztJQVFYLFVBQUEsR0FBYSxTQUFBO01BQ1gsTUFBTSxDQUFDLElBQVAsQ0FBWSxrSEFBWjtNQUNBLEVBQUUsQ0FBQyxjQUFILEdBQW9CO0lBRlQ7SUFLYixZQUFBLEdBQWUsU0FBQTtNQUNiLEVBQUUsQ0FBQyxhQUFILEdBQW1CLFNBQVMsQ0FBQyxNQUFWLENBQUE7TUFDbkIsT0FBTyxDQUFDLE9BQVIsQ0FBZ0IsRUFBRSxDQUFDLGFBQW5CLEVBQWtDLFNBQUMsWUFBRDtRQUNoQyxZQUFZLENBQUMsSUFBYixHQUFvQixJQUFJLENBQUMsTUFBTCxDQUFBO01BRFksQ0FBbEM7SUFGYTtJQU9mLEVBQUUsQ0FBQyxhQUFILEdBQW1CO0lBQ25CLEVBQUUsQ0FBQyxjQUFILEdBQW9CO0lBQ3BCLEVBQUUsQ0FBQyxZQUFILEdBQWtCO0lBQ2xCLEVBQUUsQ0FBQyxVQUFILEdBQWdCO0lBQ2hCLFFBQUEsQ0FBQTtFQTFCNEIsQ0FEaEM7QUFBQSIsImZpbGUiOiJtYWluL21haW4uY29udHJvbGxlci5qcyIsInNvdXJjZVJvb3QiOiIvc291cmNlLyIsInNvdXJjZXNDb250ZW50IjpbImFuZ3VsYXIubW9kdWxlIFwibW9kZWxvRnJvbnRDb2ZmZWVcIlxuICAuY29udHJvbGxlciBcIk1haW5Db250cm9sbGVyXCIsICgkdGltZW91dCwgd2ViRGV2VGVjLCB0b2FzdHIpIC0+XG4gICAgdm0gPSB0aGlzXG4gICAgYWN0aXZhdGUgPSAtPlxuICAgICAgZ2V0V2ViRGV2VGVjKClcbiAgICAgICR0aW1lb3V0ICgtPlxuICAgICAgICB2bS5jbGFzc0FuaW1hdGlvbiA9ICdydWJiZXJCYW5kJ1xuICAgICAgICByZXR1cm5cbiAgICAgICksIDQwMDBcbiAgICAgIHJldHVyblxuXG4gICAgc2hvd1RvYXN0ciA9IC0+XG4gICAgICB0b2FzdHIuaW5mbyAnRm9yayA8YSBocmVmPVwiaHR0cHM6Ly9naXRodWIuY29tL1N3aWlwL2dlbmVyYXRvci1ndWxwLWFuZ3VsYXJcIiB0YXJnZXQ9XCJfYmxhbmtcIj48Yj5nZW5lcmF0b3ItZ3VscC1hbmd1bGFyPC9iPjwvYT4nXG4gICAgICB2bS5jbGFzc0FuaW1hdGlvbiA9ICcnXG4gICAgICByZXR1cm5cblxuICAgIGdldFdlYkRldlRlYyA9IC0+XG4gICAgICB2bS5hd2Vzb21lVGhpbmdzID0gd2ViRGV2VGVjLmdldFRlYygpXG4gICAgICBhbmd1bGFyLmZvckVhY2ggdm0uYXdlc29tZVRoaW5ncywgKGF3ZXNvbWVUaGluZykgLT5cbiAgICAgICAgYXdlc29tZVRoaW5nLnJhbmsgPSBNYXRoLnJhbmRvbSgpXG4gICAgICAgIHJldHVyblxuICAgICAgcmV0dXJuXG5cbiAgICB2bS5hd2Vzb21lVGhpbmdzID0gW11cbiAgICB2bS5jbGFzc0FuaW1hdGlvbiA9ICcnXG4gICAgdm0uY3JlYXRpb25EYXRlID0gMTQ0MTkyOTI5NDUzOVxuICAgIHZtLnNob3dUb2FzdHIgPSBzaG93VG9hc3RyXG4gICAgYWN0aXZhdGUoKVxuICAgIHJldHVyblxuIl19</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Sep 10 2015 21:30:43 GMT-0300 (BRT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

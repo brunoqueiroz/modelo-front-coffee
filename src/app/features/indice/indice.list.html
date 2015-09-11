@@ -1,0 +1,22 @@
+<div>
+    <div class="page-header">
+        <div class="container">
+            <h1 translate>indice.INDICE_CORRECAO</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <a ng-click="adicionar(100)" class="input-small btn btn-primary pull-right" translate>indice.ADICIONAR</a>
+            </div>
+        </div>
+        <br/>
+        <table id="datatable-indice" guideline-datatables data-options="options" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th ng-repeat="column in options.columns" datatable-heading ng-bind="column.title"></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="box-multi-select">
+    <header class="ui-corner-top">
+        <p for="multiSelectAvailable">{{ avaliableLabel }} ({{ avaliable.length }})</p>
+    </header>
+    <div class="sub-search">
+        <label>Buscar</label>
+        <input type="text" ng-model="avaliableSearch">
+        <a class="btn btn-secondary" ng-click="clickFind(avaliableSearch)" ng-disabled="!avaliableSearch || avaliableSearch.length < 3"><i class="icon-search icon-white"></i></a>
+        <div popover="true" class="icon-info-sign" data-placement="top" data-trigger="hover" data-content="Para efetuar a busca você deve digitar no mínimo 3 caracteres." data-original-title=""></div>
+    </div>
+    <div class="sub-options">
+        <input type="checkbox" id="checkAllAvaliable" ng-model="checkAllAvaliable" ng-click="checkAll(avaliable,avaliableSearch, checkAllAvaliable)">
+        <label for="checkAllAvaliable">Selecionar todos</label>
+    </div>
+    <div class="content">
+        <div ng-repeat="a in avaliable track by a.id">
+            <label class="checkbox in-line">
+                <input ng-model="a.selected" type="checkbox"> {{a[displayAttr]}}
+            </label>
+        </div>
+    </div>
+    <footer class="ui-corner-bottom"></footer>
+</div>
+<div class="select-buttons">
+    <div class="content-buttons">
+        <a class="btn mover right" ng-click="add()" title="Adicionar Empresa" ng-disabled="selected.avaliable.length == 0">
+            <i class="icon-arrow-right"></i>
+        </a>
+        <a class="btn mover left" ng-click="remove()" title="Remover Empresa" ng-disabled="selected.model.length == 0">
+            <i class="icon-arrow-left"></i>
+        </a>
+    </div>
+</div>
+<div class="box-multi-select" ng-class="model.length == 0 && submmited ? 'error':''">
+    <header class="ui-corner-top">
+        <p for="multiSelectSelected">{{ selectedLabel }} ({{ model.length }})</p>
+    </header>
+    <div class="sub-search">
+        <label>Buscar</label>
+        <input type="text" ng-model="modelSearch" ng-disabled="model.length == 0">
+    </div>
+    <div class="sub-options">
+        <input type="checkbox" ng-disabled="disableInicio" id="checkAllModel" ng-disabled="model.length == 0" ng-model="checkAllModel" ng-click="checkAll(model,modelSearch, checkAllModel)">
+        <label for="checkAllModel">Selecionar todos</label>
+    </div>
+    <div class="content">
+        <div ng-repeat="a in model track by a.id| filter: modelSearch | orderBy: sigla">
+            <label class="checkbox in-line">
+                <input ng-model="a.selected" ng-disabled="a.inativo" type="checkbox"> {{a[displayAttr]}}
+            </label>
+        </div>
+    </div>
+    <footer class="ui-corner-bottom"></footer>
+    <p class="error pd-top10" ng-show="model.length == 0 && submmited">Este campo é requerido</p>
+</div>

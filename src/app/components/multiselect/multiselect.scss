@@ -1,0 +1,89 @@
+.error{
+    color: #b94a48;
+}
+.select-buttons{
+    float: left;
+    padding: 10px;
+    height: 350px;
+    .content-buttons{
+        margin-top:140px !important;
+    }
+}
+.btn.mover {
+    display: block;
+    margin-top: 25px;
+    vertical-align: middle;
+}
+
+.btn.mover i {
+    margin: 0;
+}
+
+.box-multi-select{
+    width: 350px;
+    float: left;
+
+    header{
+        background-color: #F1F1F1;
+        border: 1px solid #dcdcdc;
+        padding: 10px 10px 1px 10px;
+        p{
+            font-weight: bold;
+        }
+    }
+    
+    .sub-search{
+        background-color: #F1F1F1;
+        border: 1px solid #dcdcdc;
+        border-top: 0;
+        padding: 10px;
+        
+        label{
+            float: left;
+            margin-right: 10px;
+            margin-top:5px;
+        }
+        input{
+            width: 212px;
+        }
+        a{
+            width:22px !important;
+            padding:3px;
+        }
+    }
+
+    .sub-options{
+        background-color: #F1F1F1;
+        border: 1px solid #dcdcdc;
+        border-top: 0;
+        padding: 10px 10px 6px 10px;
+        height: 20px;
+        input{
+            clear: both;
+            float: left;
+            margin-right: 10px;
+        }
+        label{
+            float: left;
+            margin-top: -2px; //hack for build melhorar depois
+        }
+    }
+    
+    .content{
+        padding-top: 5px;
+        border-left: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc;
+        height: 208px;
+        overflow-y: auto;
+        label{
+            margin-left: 10px;
+        }
+    }
+
+    footer{
+        background-color: #F1F1F1;
+        border: 1px solid #dcdcdc;
+        padding: 10px;
+        height: 5px;
+    }
+}

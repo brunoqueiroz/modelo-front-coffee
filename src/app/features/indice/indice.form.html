@@ -1,0 +1,55 @@
+<form name="form" class="form-horizontal" style="margin:0;" novalidate ng-submit="salvar()">
+    <div class="modal-header">
+        <h3 class="modal-title">Novo índice</h3>
+    </div>
+    <div class="modal-body">
+        <div class="control-group" ng-class="{'error': form.ano.$invalid && form.$submitted}">
+            <label for="ano" class="control-label"><span translate>indice.ANO</span> *</label>
+            <div class="controls">
+                <ui-select name="ano" ng-required="true" allow-clear="true" ng-model="indice.anoReferencia" theme="select2">
+                    <ui-select-match placeholder="Selecione">{{$select.selected.descricao}}</ui-select-match>
+                    <ui-select-choices repeat="ano in anos track by ano.descricao | propsFilter: {descricao: $select.search}">
+                        <span ng-bind-html="ano.descricao"></span>
+                    </ui-select-choices>
+                </ui-select>
+                <p class="mg-top10" ng-show="form.ano.$error.required && form.$submitted" class="help-block" translate>indice.OBRIGATORIO</p>
+            </div>
+        </div>
+        <div class="control-group" ng-class="{'error': form.mes.$invalid && form.$submitted}">
+            <label for="mes" class="control-label"><span translate>indice.MES</span> *</label>
+            <div class="controls">
+                <ui-select name="mes" ng-click="expandModal()" ng-required="true" allow-clear="true" ng-model="indice.mesReferencia" theme="select2">
+                    <ui-select-match placeholder="Selecione">{{$select.selected.descricao}}</ui-select-match>
+                    <ui-select-choices repeat="mes in meses track by mes.id| propsFilter: {descricao: $select.search}">
+                        <span ng-bind-html="mes.descricao"></span>
+                    </ui-select-choices>
+                </ui-select>
+                <p class="mg-top10" ng-show="form.mes.$error.required && form.$submitted" class="help-block" translate>indice.OBRIGATORIO</p>
+            </div>
+        </div>
+        <div class="control-group" ng-class="{'error': form.valorAno.$invalid && form.$submitted}">
+            <label for="valorAno" class="control-label"><span translate>indice.VALOR_ANO</span> *</label>
+            <div class="controls">
+                <div class="input-prepend">
+                    <span class="add-on">R$</span>
+                    <input ng-model="indice.indcValorAnual" id="indice-valor-ano" maxlength="15" required name="valorAno" class="span2 text-right" type="text" ui-money-mask placeholder=",00">
+                </div>
+                <p class="mg-top10" ng-show="form.valorAno.$error.required && form.$submitted" class="help-block" translate>indice.OBRIGATORIO</p>
+            </div>
+        </div>
+        <div class="control-group" ng-class="{'error': form.valorMes.$invalid && form.$submitted}">
+            <label for="valorMes" class="control-label"><span translate>indice.VALOR_MES</span> *</label>
+            <div class="controls">
+                <div class="input-prepend">
+                    <span class="add-on">R$</span>
+                    <input ng-model="indice.indcValorMensal" id="indice-valor-mes" maxlength="15" required ui-money-mask name="valorMes" class="span2 text-right" type="text" placeholder=",00">
+                </div>
+                <p class="mg-top10" ng-show="form.valorMes.$error.required && form.$submitted" class="help-block" translate>indice.OBRIGATORIO</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <input type="reset" class="btn input-small" ng-click="cancel()" value="{{'indice.CANCELAR' | translate}}" />
+        <input type="submit" class="btn btn-primary mg-lt10 input-small" value="{{'indice.SALVAR' | translate}}" />
+    </div>
+</form>
